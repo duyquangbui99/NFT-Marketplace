@@ -1,0 +1,91 @@
+.explore{
+    width: 99%;
+    height: 100vh;
+    background-color: var(--light-grey-color);
+    margin: 0 auto; 
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.explore-container-left{
+    margin: 20px;
+    width: 70%;
+}
+.explore-container-right{
+    margin: 20px;
+    width: 30%;
+    border: 1px solid blue;
+}
+
+.explore-auction{
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+}
+.auction-nft{
+    width: 45%;
+    height: 95%;
+    border-radius: 20px;
+    margin: 1% 1%;
+
+}
+.auction-nft-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.auction-info{
+    padding: 5% 0;
+    width: 50%;
+    height: 95%;
+    border-radius: 20px;
+    margin: 1% 1%;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    border: red 1px solid;
+}
+.auction-line{
+    height: 1px;
+    width: 100%;
+    background-color: var(--light-grey-color);
+}
+.auction-info h2{
+    font-size: var(--h2-size);
+    font-weight: var(--h2-weight);
+}
+.dark-grey{
+    color: var(--grey-color);
+}
+
+@media only screen and (max-width: 900px){
+
+}
+
+@media screen and (max-width: 767px){
+    .explore{
+        flex-direction: column;
+        justify-content: unset;
+    }
+    .explore-container-left{
+        margin: 5%;
+        width: 90%;
+    }
+    .explore-auction{
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .explore-container-left{
+        margin: 2%;
+        width: 96%;
+    }
+    .explore-auction{
+        height: 200px;
+    }
+}

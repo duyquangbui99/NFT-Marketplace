@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;600&family=Poppins:wght@400;500;600&display=swap');
+
+@import url("sections/hero.css");
+@import url("sections/explore.css");
+
+/*======= Variables CSS =======*/
+:root{
+    --header-height: 4rem;
+    /*======= Colors =======*/
+    --header-bg-color: #121117;
+    --nav-brand-height: 55px;
+    --top-nav-item-color: #f5f5f5;
+    --nav-item-color: #121117;
+    --primary-color: #4528DC;
+    --secondary-color: #57048A;
+    --white-color: #f9f9f9;
+    --black-color: #040402;
+    --grey-color: #6F7378;
+    --light-grey-color: #D3D3D3;
+    --dark-grey-color: #191919;
+
+
+    /*======= Font and typography =======*/
+    /* .5rem = 8px; 1rem = 16px */
+    --primary-font: 'Jost', sans-serif;
+    --secondary-font: 'Poppins', sans-serif;
+    --h1-size: 3.5rem;
+    --h1-weight: 900;
+    --h2-size: 2.5rem;
+    --h2-weight: 700;
+    --h3-size: 2rem;
+    --h3-weight: 600;
+    --p-size: 1rem;
+    --p-weight: 400;
+    --logo-size: 2rem;
+
+    /*======= Font Weight =======*/
+    --font-small-bold: 570;
+    --font-medium-bold: 700;
+    --font-semi-bold: 900;
+
+}
+
+/*======= Tablet =======*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    :root{
+        --h1-size: 3rem;
+        --h1-weight: 800;
+        --h2-size: 3rem;
+        --h2-weight: 700;
+        --h3-size: 2rem;
+        --h3-weight: 600;
+        --p-size: 1rem;
+        --p-weight: 400;
+        --logo-size: 1.5rem;
+    }
+}
+/*======= smart phone =======*/
+@media screen and (max-width: 767px){
+    :root{
+        --h1-size: 2rem;
+        --h1-weight: 700;
+        --h2-size: 3rem;
+        --h2-weight: 700;
+        --h3-size: 2rem;
+        --h3-weight: 600;
+        --p-size: 1rem;
+        --p-weight: 400;
+        --logo-size: 1.5rem;
+    }
+}
+
+/*======= BASE =======*/
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    font-family: var(--primary-font);
+    color: var(--black-color);
+}
+
+h1,h2,h3{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+ul { 
+    list-style: none;
+}
+
+a{
+    text-decoration: none; 
+}
+
+
+
+/*======= HEADER =======*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    position: relative;
+    height: var(--header-height);
+}
+.nav-sections{
+    flex: 0 0 40%; 
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-sections a {
+    color: var(--black-color);
+    font-weight: var(--font-small-bold);
+}
+.nav-sections a:hover {
+    color: var(--grey-color);
+}
+
+.logo{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    font-size: var(--logo-size);
+}
+
+
+.navbar-connect-btn{
+    padding: 10px 50px;
+    border-radius:25px;
+    border:none;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-connect-btn:hover{
+    background-color: var(--white-color);
+    color: var(--black-color); 
+}
+
+.navbar-btn-ava i{
+    display: none;
+}
+
+@media only screen and (max-width: 900px){
+    .navbar{
+        padding: 15px 15px;
+    }
+    .navbar-btn-ava i{
+        display: unset;
+        padding-right: 10px;
+        cursor: pointer;
+    }
+    .nav-sections{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        left: -100%; /* hide the menu sections */
+        top: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;  
+        transition: all .5s;
+    }
+    .nav-sections li {
+        line-height: 50px;
+    }    
+    .nav-sections.active {
+        left: 0;  /* slide the menu to the original position */
+    }
+}
+
+@media screen and (max-width: 767px){
+    .navbar-connect-btn{
+        padding: 10px 10px;
+    } 
+}
+
