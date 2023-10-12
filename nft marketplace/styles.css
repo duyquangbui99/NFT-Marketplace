@@ -18,6 +18,9 @@
     --grey-color: #6F7378;
     --light-grey-color: #D3D3D3;
     --dark-grey-color: #191919;
+    --orange-color: #FFB053;
+    --dark-orange-color: #D6581C;
+    --gradient-orange: linear-gradient(45deg, #FFB053,#D6581C);
 
 
     /*======= Font and typography =======*/
@@ -28,11 +31,12 @@
     --h1-weight: 900;
     --h2-size: 2.5rem;
     --h2-weight: 700;
-    --h3-size: 2rem;
+    --h3-size: 1.5rem;
     --h3-weight: 600;
     --p-size: 1rem;
     --p-weight: 400;
     --logo-size: 2rem;
+    --info-size: 1rem;
 
     /*======= Font Weight =======*/
     --font-small-bold: 570;
@@ -45,13 +49,8 @@
 @media screen and (min-width: 768px) and (max-width: 1023px){
     :root{
         --h1-size: 3rem;
-        --h1-weight: 800;
-        --h2-size: 3rem;
-        --h2-weight: 700;
-        --h3-size: 2rem;
-        --h3-weight: 600;
-        --p-size: 1rem;
-        --p-weight: 400;
+        --h2-size: 2rem;
+        --h3-size: 1.5rem;
         --logo-size: 1.5rem;
     }
 }
@@ -59,14 +58,29 @@
 @media screen and (max-width: 767px){
     :root{
         --h1-size: 2rem;
-        --h1-weight: 700;
-        --h2-size: 3rem;
-        --h2-weight: 700;
+        --h2-size: 1.5rem;
         --h3-size: 2rem;
-        --h3-weight: 600;
-        --p-size: 1rem;
-        --p-weight: 400;
         --logo-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 615px){
+    :root{
+        --h1-size: 2rem;
+        --h2-size: 1.5rem;
+        --h3-size: 2rem;
+        --logo-size: 1.5rem;
+        --info-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    :root{
+        --h1-size: 2rem;
+        --h2-size: 1rem;
+        --h3-size: 2rem;
+        --logo-size: 1.5rem;
+        --info-size: 0.7rem;
     }
 }
 
@@ -101,6 +115,10 @@ ul {
 
 a{
     text-decoration: none; 
+}
+
+.bold{
+    font-weight: var(--h2-weight);
 }
 
 
